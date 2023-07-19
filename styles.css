@@ -1,0 +1,193 @@
+/* FONT STYLE GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap");
+/* FONTS /  
+font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif;
+*/
+
+/* RESET */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* MAIN STYLE */
+html {
+  /* font-size: 10px; */
+  /* 10 px / 16px = 0.625 or 62.5% */
+  /* Percentage of user's browser font-size setting to respect user font-size */
+  font-size: 62.5%;
+}
+body {
+  background-color: hsl(30, 38%, 92%);
+  width: 100%;
+  height: 100vh;
+  font-family: "Fraunces", serif;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 60.1rem;
+  height: 45rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1rem;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.mobile-img {
+  display: none;
+}
+/* LEFT SIDE */
+.left-side {
+  width: 100%;
+  display: block;
+}
+.main-img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+/* RIGHT SIDE */
+.right-side {
+  padding: 3.5rem 3.2rem;
+}
+.paragraph-text {
+  color: hsla(228, 12%, 48%, 0.8);
+  font-family: "Montserrat", sans-serif;
+}
+.head-paragraph {
+  letter-spacing: 0.5rem;
+  font-size: 1.4rem;
+  margin-bottom: 2.2rem;
+  font-weight: 500;
+}
+.header-text {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.7px;
+  color: hsl(212, 21%, 14%);
+  padding-right: 3.7rem;
+  margin-bottom: 2.7rem;
+}
+.description {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  margin-bottom: 3.6rem;
+}
+span {
+  text-transform: uppercase;
+}
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2.8rem;
+}
+.price--lg {
+  font-size: 2.9rem;
+  color: hsl(158, 36%, 37%);
+}
+.price--sm {
+  color: hsla(228, 12%, 48%, 0.8);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  position: relative;
+  display: inline-block;
+}
+.price--sm::after {
+  content: "";
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  width: 100%;
+  transform: translatey(80%);
+  border-bottom: 1px solid hsl(158, 36%, 37%);
+}
+a:link,
+a:visited {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  background-color: hsl(158, 36%, 37%);
+  padding: 1.6rem;
+  border-radius: 0.8rem;
+}
+a:hover,
+a:active {
+  background-color: hsl(158, 36%, 23%);
+  cursor: pointer;
+}
+
+/* MEDIA QUERRIES FOR RESPONSIVE */
+@media (max-width: 40.625em) {
+  .main-container {
+    max-width: 95%;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.7fr 1fr;
+    border-radius: 1.8rem;
+  }
+  .main-img {
+    display: none;
+  }
+  .mobile-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .right-side {
+    padding: 3.8rem 3.5rem;
+  }
+  .head-paragraph {
+    font-size: 2rem;
+    /* margin-bottom: 2.2rem; */
+    /* font-weight: 500; */
+  }
+  .header-text {
+    font-size: 5.8rem;
+    padding-right: 2rem;
+    line-height: 1.2;
+    /* font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.7px;
+    color: hsl(212, 21%, 14%);
+    padding-right: 3.7rem;
+    margin-bottom: 2.7rem; */
+  }
+  .description {
+    font-size: 2.4rem;
+    padding-right: 3rem;
+    line-height: 1.6;
+    /* font-size: 1.4rem;
+    line-height: 1.4;
+    margin-bottom: 3.6rem; */
+  }
+  .price--lg {
+    font-size: 5.5rem;
+  }
+  .price--sm {
+    font-size: 2.2rem;
+  }
+  a:link,
+  a:visited {
+    gap: 1rem;
+    font-size: 2.2rem;
+    padding: 3rem;
+    border-radius: 0.8rem;
+  }
+}
